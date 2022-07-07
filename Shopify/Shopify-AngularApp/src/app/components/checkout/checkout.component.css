@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.container{
+    margin:0 auto;
+    padding:50px;
+ 
+}
+
+.shipping_address{
+    /* background-color: antiquewhite; */
+    height:100%;
+    width:100%;
+}
+.customer{
+    margin-bottom: 40px;
+}
+.customer img{
+    /* border: black; */
+    height:50px;
+    width:50px;
+}
+.user{
+    margin-left: 20px;
+    /* flex-direction: row; */
+}
+.user small{
+    margin-bottom: 10px;
+}
+label{
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-family: 'Cardo', serif;
+}
+.lastname{
+    margin: 0 0 0 20px;
+}
+.container1{
+    margin-top: 5%;
+    justify-content: space-between;
+}
+.container1 button{
+    padding: 10px;
+}
+.container1 p{
+    color: blue;
+    cursor:pointer;
+    margin-top: 3%;
+}
+.total{
+    background-color:#dcdcdc;
+    margin: 0 0 0 50px;
+    /* padding-left: 500px; */
+    width:50%;
+  
+}
+.tot h2{
+    margin:10px 0 10px 10px;
+}
+.rs{
+    margin: 15px 0 0 10px;
+}
+
+.container2{
+   
+    width: 500px;
+    height: 550px;
+    margin: 0 auto;
+  
+    /* background-color:aliceblue; */
+    border: transparent;
+    text-align: center;
+    
+     /* padding: 100px; */
+}
+
+
+
+
+.col img{
+    height:150px;
+    width:200px;
+    margin:10% 0 0 ;
+    /* margin:80px ; */
+    /* padding: 10px; */
+    /* align-items: center; */
+    /* background-color: transparent; */
+
+}
+.col h3{
+    margin:8% 0 0 ;
+}
+
+.col p{
+font-family: 'Cardo', serif;
+font-size: 25px;
+margin: 8% 0 0 ;
+}
+.col button{
+    width:50%;
+    margin:10% 0 0 ;
+    padding:15px
+}

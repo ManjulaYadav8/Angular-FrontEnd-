@@ -1,0 +1,77 @@
+<div>
+    <nav class="navbar" *ngIf="searchBox">
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn.shopify.com/s/files/1/0269/1665/1065/files/artofa_logo-01_5e595f94-fa5e-46ab-b23f-93c84bb37ce8_1024x1024.png?v=1613800223"
+                width="50%" height="20%" class="d-inline-block align-top" alt="">
+        </a>
+        <ul class="d-flex">
+            <li>
+                <a href="">Vendors</a>
+                <ul>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Registry</a>
+                <ul>
+                    <li><a href="">create a Registry</a></li>
+                    <li><a href="">Registry Benefits</a></li>
+                    <li><a href="">How it works </a></li>
+                    <li><a href="">Find a couple</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Guest List</a>
+                <ul>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Albums</a>
+                <ul>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                    <li><a href="">*******</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div>
+            <ul class="d-flex icons">
+                <li>
+                    <button routerLink="login">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li>
+                    <button (click)="SearchFalse()">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li><button><i class="fa fa-heart-o" aria-hidden="true"></i></button></li>
+                <li>
+                    <button routerLink="cart">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                        <div style="font-size: 15px;" class="badge bg-light">{{totalItem}}</div>
+                    </button></li>
+            </ul>
+            <i class='fa-solid fa-x'></i>
+
+        </div>
+    </nav>
+    <nav *ngIf="searchBox==false">
+        <div class="active-pink-3 active-pink-4 mb-4">
+            <input class="form-control search" type="text" placeholder="Search here" aria-label="Search"
+                [(ngModel)]="searchTerm" (keyup)="search($event)">
+            <button (click)="SearchTrue()">
+                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+</div>

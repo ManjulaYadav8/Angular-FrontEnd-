@@ -1,0 +1,48 @@
+
+<div class="conatiner-fluid">
+  <div class="box" >
+      <h1>Login</h1>
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginUserForm">
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" formControlName="email" requried>
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <small id="emailHelp" class="form-text "><a href="">Forgot Password?</a></small>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="password" required>
+        </div>
+
+        <div class="errMsg" *ngIf="IsError">
+          <p>{{message}}!!!!</p>
+        </div>
+
+        <div class="button">
+          <button type="submit" class="btn btn-dark" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">sign in</button>
+        </div>
+
+      
+       
+      </form>
+      <div class="button">
+        <button type="submit" class="btn btn-dark" routerLink="register"> create account</button>
+      </div>
+    </div>
+
+                            <!--- SUCESSFULL ORDERD PAGE-->
+
+    <!-- <div class="container" *ngIf="IsOrder">
+        <div class="row">
+          <div class="col mt-4">
+          <img src="https://www.nepassage.org/sites/default/files/styles/wysiwyg_image_max_width/public/media/2020/08/green-check-mark-icon-checkmark-in-circle-for-vector-26839334.jpg?itok=Bii43XBb" alt="">
+
+          <h3>Thank You !</h3>
+          <p>Your Order has been Successfull....!</p>
+          <button class="btn btn-dark" routerLink="/"> Shop More</button>
+        </div>
+        </div>
+    </div> -->
+</div>

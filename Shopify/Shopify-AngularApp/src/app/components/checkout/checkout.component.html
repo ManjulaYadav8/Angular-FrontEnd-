@@ -1,0 +1,97 @@
+<div class="container d-flex" *ngIf="!Isorder">
+    <div class="shipping_address">
+        <div class="customer d-flex">
+            
+            <img src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png" alt="">
+            <div class="user">
+                <small>{{active_customer.first_name}}  {{active_customer.last_name}} ({{active_customer.email}})</small><br>
+                <a href="">Logout</a>
+            </div>
+
+        </div>
+        <h6>Shipping address</h6>
+        <form action=""  [formGroup]="UserOrderForm">
+            <div class="form-group">
+                <label></label>
+                <input type="text" class="form-control" placeholder="country" formControlName="country">
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="First name" formControlName="first_name">
+                    </div>
+                    <div class="col lastname">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="Last name" formControlName="last_name">
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label></label>
+                <input type="text" class="form-control" placeholder="Address" formControlName="address1" required>
+
+            </div>
+            <div class="form-group">
+                <label></label>
+                <input type="text" class="form-control" placeholder="Apartment,suite,etc.(optional)" formControlName="address2" required>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="City" formControlName="city" required>
+                    </div>
+                    <div class="col lastname">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="State" formControlName="province" required>
+                    </div>
+                    <div class="col lastname">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="Zip code" formControlName="zip" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label></label>
+                <input type="text" class="form-control" placeholder="Phone(Optional)" formControlName="phone" required>
+
+            </div>
+
+        </form>
+        <div class="container1 d-flex">
+            <p routerLink="/cart">Return to cart</p>
+            <button  type=submit class="btn  btn-primary" (click)="place_an_order()">Continue to Shipping</button>
+
+        </div>
+    </div>
+    <div class="total">
+        <div class="tot ">
+
+            <h2>Total:</h2>
+            <!-- <p class="tot1">RS</p> -->
+            <div class="tot1 d-flex">
+                <p class="rs">RS.</p>
+                <h2><i class="fa fa-inr" aria-hidden="true"></i></h2>
+                <h2>{{ grandTotal}}</h2>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+                       <!-- - SUCESSFULL ORDERD PAGE-->
+
+    <div class="container2" *ngIf="Isorder">
+        <div class="row">
+          <div class="col mt-4">
+          <img src="https://www.nepassage.org/sites/default/files/styles/wysiwyg_image_max_width/public/media/2020/08/green-check-mark-icon-checkmark-in-circle-for-vector-26839334.jpg?itok=Bii43XBb" alt="">
+
+          <h3>Thank You !</h3>
+          <p>Your Order has been Successfull....!</p>
+          <button class="btn btn-dark" routerLink="/"> Shop More</button>
+        </div>
+        </div>
+    </div>
