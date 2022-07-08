@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 var shop = 'manjulacodeswift.myshopify.com';
-var accesstoken = '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';
+var accesstoken = '';
 
 // router.get('/getOrders', async (req, res) => {
 //     let options = {

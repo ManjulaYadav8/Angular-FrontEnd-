@@ -3,7 +3,7 @@ const { get } = require("request-promise")
 const router = express.Router();
 
 var shop = 'manjulacodeswift.myshopify.com';
-var accesstoken = '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';
+var accesstoken = '';
 
 router.get('/getCustomers', async (req, res) => {
     let options = {

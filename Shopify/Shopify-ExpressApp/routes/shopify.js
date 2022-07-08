@@ -78,19 +78,3 @@ module.exports=router;
 
 
 
-//  Session {
-//     id: '569eb487-6688-4288-a10f-a13712b6089a',
-//     shop: 'manjulacodeswift.myshopify.com',
-//     state: '441798701459598',
-//     isOnline: true,
-//     accessToken: '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',
-//     expires: 2022-07-02T05:11:22.825Z,
-//     scope: 'write_marketing_events,write_products,write_customers,write_content,write_orders',
-//     onlineAccessInfo: {
-//       expires_in: 86398,
-//       associated_user_scope: 'write_marketing_events,write_products,write_customers,write_content,write_orders',
-//       session: '68cbfe1d0bd23d13b2c4aa217691fe8ca388aff40edd4a34e633c9d7a07ea8be',
-//       account_number: 0,
-//       associated_user: [Object]
-//     }
-//   }
