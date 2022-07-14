@@ -1,35 +1,34 @@
-body{
-    padding: 0;
+* {
     margin: 0 auto;
-    background-color: #fff;
-
-    
+    padding: 0%;
+   
 }
 
-h1{
-    color:#bf874d;
+.carousel-inner {
+    margin-top: 10px;
+    height: 500px;
+}
+
+h1 {
+    color: #bf874d;
     font-size: 2.25em;
     letter-spacing: .025em;
     line-height: 1;
     font-family: 'Cardo', serif;
     text-align: center;
-    /* margin: 10px 0 50px; */
     padding: 50px 0 20px 0;
 
 }
-/* .active-pink-3{
-    padding: 50px;
-    width: 50%;
-    margin-left: 25%;
-} */
+
+
 
 
 
 .card {
-    padding: 20px;
+    padding: 10px;
     margin: 35px;
     text-align: center;
-    /* height: 100px; */
+    height: 100%;
 }
 
 .card img {
@@ -37,16 +36,132 @@ h1{
     height: 200px;
     margin-bottom: 15px;
     font-size: 1000px;
-   
 }
 
 .card img:hover {
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
+    /* transition: 0.3s ease-in-out; */
+    /* transform: scale(1); */
 
 }
-h5{
-    font-family:'Cardo', serif ;
+
+h5 {
+    font-family: 'Cardo', serif;
     overflow: hidden;
+
+}
+
+.btn-dark {
+    padding: 10px;
+}
+
+.button1 {
+   
+    width: 200px;
+    padding: 10px;
+    left: 0;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease-out;
+    background-color: rgba(0, 0, 0, .3);
+    border: transparent;
+    z-index: 100px;
+
+}
+
+.card:hover .button1 {
+    opacity: 1;
+}
+
+
+
+
+.container1 {
+    margin-top: 0%;
+    width: 100%;
    
 }
+
+.close {
+
+    margin-left: 95%;
+    font-size: 30px;
+
+}
+
+.col img {
+    width: 300px;
+    height: 300px;
+    margin-left: 30%;
+    
+}
+
+.col h4 {
+    
+    margin-left: 10%;
+    margin-top: 3%;
+    color: #bf874d;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: .025em;
+}
+
+.price {
+    
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+.col small {
+    margin-left: 10%;
+    margin-top: 3%;
+
+}
+
+/* .box {
+    width: 0%;
+    height: 30px;
+    border: 1px solid black;
+    margin-top: 30%;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between; 
+     border-radius: 10px;
+}
+.box button{
+    padding:0;
+    margin: 0;
+}
+
+.sign{
+    font-size: 25px; 
+    background-color: transparent;
+    border: none;
+    justify-content: space-around;
+
+}
+ */
+
+
+.btn1 {
+   
+    background-color: #ffff;
+    margin-top: 5%;
+    margin-bottom: 50px;
+    color: #bf874d;
+    padding: 10px;
+    width: 80%;
+    letter-spacing: .3em;
+    box-sizing: border-box;
+    border: .5px solid #bf874d;
+    border-radius: 30px;
+    margin-left:10%
+}
+
+.description{
+
+    font-family: 'Quattrocento', serif;
+    margin: 3% 2% 0 10%;
+
+}
+

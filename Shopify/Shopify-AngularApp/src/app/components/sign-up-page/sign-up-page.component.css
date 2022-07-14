@@ -31,3 +31,11 @@ button{
     font-size:.75em ;
 
 }
+
+.sucessMsg p{
+    color:green;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-family: 'Times New Roman', Times, serif;
+}

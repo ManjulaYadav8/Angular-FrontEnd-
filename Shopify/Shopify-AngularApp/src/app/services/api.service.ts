@@ -14,18 +14,21 @@ export class ApiService {
   search = new BehaviorSubject<string>("");
   productList = new BehaviorSubject<any>([]);
   orders:any;
+  BaseUrl:any="https://cs-artofa-demo-server.el.r.appspot.com";
+  // BaseUrl:string="http://localhost:3000";
 
   
   constructor(private _http: HttpClient) { }
 
   cartProducts() {
-    console.log("cart products productList BehaviorSubject",this.productList)
+    // console.log("cart products productList BehaviorSubject",this.productList)
     return this.productList;
   }
 
   getProducts() {
     console.log("getProducts");
-    return this._http.get("http://localhost:3000/products/getProducts");
+   
+    return this._http.get(`${this.BaseUrl}/products/getProducts`);
   }
 
 
@@ -38,12 +41,12 @@ export class ApiService {
     else{
       this.cartItemList.push(product);
     }
-    console.log("productList BehaviorSubject",this.productList);
+    // console.log("productList BehaviorSubject",this.productList);
     // this.grandTotalPrice();
     this.productList.next(this.cartItemList);
     this.cartItemsLength = this.cartItemList.length;
-    console.log("cartItemsLength-->",this.cartItemsLength);
-    console.log("ServiceCartItemList",this.cartItemList);
+    // console.log("cartItemsLength-->",this.cartItemsLength);
+    // console.log("ServiceCartItemList",this.cartItemList);
   }
 
 

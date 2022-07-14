@@ -16,12 +16,12 @@
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" formControlName="password" required>
         </div>
 
-        <div class="errMsg" *ngIf="IsError">
+        <!-- <div class="errMsg" *ngIf="IsError">
           <p>{{message}}!!!!</p>
-        </div>
+        </div> -->
 
         <div class="button">
-          <button type="submit" class="btn btn-dark" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">sign in</button>
+          <button type="submit" class="btn btn-dark" (click)="onSubmit()">sign in</button>
         </div>
 
       

@@ -34,13 +34,13 @@ export class CheckoutComponent implements OnInit {
   
   ngOnInit(): void {
     this.grandTotal=this._apiService.grandTotalPrice();
-    console.log(this.grandTotal);
+    // console.log(this.grandTotal);
 
     this.active_customer=this._customerService.active_customer;
-    console.log("checkout-active_customer-->",this.active_customer);
+    // console.log("checkout-active_customer-->",this.active_customer);
 
     this.cartList=this._apiService.cartItemList;
-    console.log("checkout-CartList-->",this.cartList);
+    // console.log("checkout-CartList-->",this.cartList);
 
   }
 
@@ -49,8 +49,9 @@ export class CheckoutComponent implements OnInit {
   place_an_order(){
     // this._customerService.Orders(this.active_customer,)
     this.userShippingInfo=this.UserOrderForm.value;
-    console.log(this.userShippingInfo);
+    // console.log(this.userShippingInfo);
     this.Isorder=true;
+    
     this._customerService.Orders(this.active_customer,this.cartList,this.UserOrderForm.value);
    
   }

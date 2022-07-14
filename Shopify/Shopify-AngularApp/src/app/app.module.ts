@@ -18,7 +18,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
-
+import { FooterComponent } from './components/footer/footer.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     LoginPageComponent,
     SignUpPageComponent,
     CartListComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    FooterComponent
     
   ],
   imports: [
@@ -38,6 +40,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     Ng2SearchPipeModule,
     FormsModule,
     ReactiveFormsModule,
+    SweetAlert2Module.forRoot()
   
   ],
   providers: [ApiService],

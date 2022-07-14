@@ -15,12 +15,15 @@ export class HeaderComponent implements OnInit {
   constructor( private _apiService:ApiService) { }
 
   ngOnInit(){
+
+    //storing cartItems length for display  in header from cartproducts
      this._apiService.cartProducts().subscribe((res:any)=>{
         this.totalItem=res.length;
      })
     
   }
 
+  //used these functions for serach box 
   SearchFalse(){
     return this.searchBox=false;
   }
@@ -31,7 +34,7 @@ export class HeaderComponent implements OnInit {
   //sending products name to apiservice
   search(event:any){
     this.searchTerm = (event.target as HTMLInputElement).value;
-    console.log(this.searchTerm);
+    // console.log(this.searchTerm);
     this._apiService.search.next(this.searchTerm);
   }
 

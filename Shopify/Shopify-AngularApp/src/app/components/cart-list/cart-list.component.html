@@ -3,7 +3,7 @@
     <div class="container">
         <div class="cart-title d-flex">
             <h1>Your Cart</h1>
-            <button class="btn btn-light">continue shopping</button>
+            <a routerLink="/" style="color:black; margin-top: 15px;">continue shopping</a>
         </div>
         <form>
             <table class="table">
@@ -36,18 +36,19 @@
                         </td>
                         <td>
                             <div class="d-flex">
-                            <div class="box d-flex">
-                                <button class="minus sign" (click)="Decrement(item.id)">-</button>
-                                <span class="">{{item.quantity}}</span>
-                                <button class="plus sign" (click)="Increment(item.id)">+</button>
+                                <div class="box d-flex">
+                                    <button class="minus sign" (click)="Decrement(item.id)">-</button>
+                                    <span class="">{{item.quantity}}</span>
+                                    <button class="plus sign" (click)="Increment(item.id)">+</button>
+                                </div>
+                                <button class="remove" (click)="RemoveFromCart(item.id)"><i class="fa fa-trash-o"
+                                        aria-hidden="true"></i></button>
                             </div>
-                            <button class="remove" (click)="RemoveFromCart(item.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                        </div>
                         </td>
                         <td>
                             <div class="total">{{item.total}}</div>
                         </td>
-                    </tr> 
+                    </tr>
                     <!-- <tr>
                         <td colspan="10" class="">
                        
@@ -61,8 +62,8 @@
                 </tbody>
             </table>
             <div class="checkout">
-            <h4>Sub-Total: Rs.<strong>{{grandTotal}}</strong></h4>
-            <button class="btn btn-danger" (click)="checkout()"> CheckOut</button>
+                <h4>Sub-Total: Rs.<strong>{{grandTotal}}</strong></h4>
+                <button class="btn btn-danger" (click)="checkout()"> CheckOut</button>
             </div>
 
 

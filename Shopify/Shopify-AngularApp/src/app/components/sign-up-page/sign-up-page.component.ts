@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CustomerService } from 'src/app/services/customer.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-sign-up-page',
@@ -10,10 +12,13 @@ import { CustomerService } from 'src/app/services/customer.service';
 export class SignUpPageComponent implements OnInit {
 
   createUserForm:FormGroup;
+  createdMsg:string="";
+  // IsCreated:boolean=false;
 
   constructor(private _customerService:CustomerService) {
     this.createUserForm=new FormGroup({
-      first_name:new FormControl('',[Validators.required,Validators.minLength(5)]),
+
+      first_name:new FormControl('',[Validators.required]),
       last_name:new FormControl('',[Validators.required]),
       email:new FormControl('',[Validators.required, Validators.email]),
       password:new FormControl('',[Validators.required])
@@ -27,7 +32,27 @@ export class SignUpPageComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.createUserForm.valid)
+    if(this.createUserForm.valid){
       this._customerService.create_customer(this.createUserForm.value);
+      // this.IsCreated=true;
+      Swal.fire({
+        'title': 'Success!',
+        "text": "Sucessfully Created Your Account",
+        "icon": 'success',
+        "confirmButtonText": 'Ok'
+      });
+    }
+    else{
+      Swal.fire({
+        'title': 'Info',
+        "text": "Please provide Valid Information",
+        "icon": 'info',
+        "confirmButtonText": 'Ok'
+      });
+    }
+
+      
     
   }
 
